@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Montserrat'; */
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(63, 248, 134, 0.906); */
+    background-image: url("img1.jpg");
+
+    position: relative;
+
+    /* padding: 50px; */
+}
+
+#tab1, #tab2{
+    height: 60vh;
+    width: 40vw;
+    background-color: rgba(253, 218, 218, 0.2);
+    /* background-color: rgb(228, 32, 139); */
+    position: absolute;
+    top: 20vh; /* percentage diyeo same hbe */
+    left: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    border-radius: 10%;
+    box-shadow: 5px 5px 4px black, -0.2px -0.1px  black;
+}
+#tab2{
+    visibility: hidden;
+}
+
+#bottom{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    gap: 10vw;
+}
+
+button{
+    /* width: ; */
+    padding: 20px 20px;
+    border-radius: 50%;
+    border: 1px solid rgb(162, 162, 162);
+    font-weight: 600;
+    color: rgb(96, 92, 92);
+    font-size: 25px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 1px 1px rgb(110, 84, 84);
+}
+button::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    bottom: -100%; /* at first 0 then changing to this*/
+    left: 0;
+    border-radius: 20%;
+    transition: all ease 0.4s;
+}
+button:hover::after{
+    bottom: 0;
+}
+button p{
+    position: relative;
+    z-index: 9;
+}
+button:hover p{
+    color: aliceblue;
+}
+
+#no1{
+    visibility: visible;
+}
+#no2{
+    visibility: hidden;
+    position: absolute;
+    left: 80vw;
+    top: 0;
+}
+#gifOfNo-1{
+    visibility: hidden;
+    position: absolute;
+    width: 10vw;
+    top: 35vh;
+    left: 0;
+}
+
+#movingArea-1{
+    position: absolute;
+    width: 35vw;
+    height: 35vh;
+
+    top: 25vh;
+    left: 40vw;
+    /* background-color: blueviolet; */
+}
+/* #wrapFigure{
+    background-color: rgba(225, 103, 146, 0.868);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+} */
+#moving-1{
+    background-color: rgba(253, 47, 99, 0.868);
+    height: 25vw;
+    width: 25vw;
+    border-radius: 50%;
+    filter: blur(15px);
+    position: absolute;
+
+    animation-name: animation1;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#moving-2{
+    background-color: rgba(253, 47, 99, 0.868);
+    height: 25vw;
+    width: 25vw;
+    border-radius: 50%;
+    filter: blur(15px);
+    position: absolute;
+
+    animation-name: animation2;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#moving-3{
+    background-color: rgba(255, 2, 65, 0.868);
+    height: 25vw;
+    width: 25vw;
+    border-radius: 50%;
+    filter: blur(15px);
+    position: absolute;
+
+    animation-name: animation3;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#moving-4{
+    background-color: rgba(255, 2, 65, 0.868);
+    height: 25vw;
+    width: 25vw;
+    border-radius: 50%;
+    filter: blur(15px);
+    position: absolute;
+
+    animation-name: animation4;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes animation1 {
+
+    from{
+        transform: translate(-20%,15%);
+    }
+    /* 50%{
+        transform: translate(50%,-50%);
+    } */
+    to{
+        transform: translate(-35%,-15%);
+    }
+    
+}
+@keyframes animation2 {
+
+    from{
+        transform: translate(-20%,15%);
+    }
+    /* 50%{
+        transform: translate(10%,0);
+    } */
+    to{
+        transform: translate(15%,15%);
+    }
+    
+}
+@keyframes animation3 {
+
+    from{
+        transform: translate(-20%,-15%);
+    }
+    /* 50%{
+        transform: translate(10%,0);
+    } */
+    to{
+        transform: translate(-40%,15%);
+    }
+    
+}
+@keyframes animation4 {
+
+    from{
+        transform: translate(20%,25%);
+    }
+    /* 50%{
+        transform: translate(10%,0);
+    } */
+    to{
+        transform: translate(10%,-30%);
+    }
+    
+}
+
+/* @media only screen and (max-width: 1000px) {
+    #tab1, #tab2{
+        height:65vh;
+        width: 70vw;
+
+    }
+  } */
